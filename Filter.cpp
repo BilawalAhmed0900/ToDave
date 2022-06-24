@@ -35,6 +35,9 @@ BOOL WINAPI GetFilterVersion(PHTTP_FILTER_VERSION pVer)
 
 DWORD WINAPI HttpFilterProc(PHTTP_FILTER_CONTEXT pfc, DWORD notificationType, LPVOID pvNotification)
 {
+	/*
+		This has to finalized but I added both ways, switch and bit check to debug first.
+	*/
 	switch (notificationType)
 	{
 	case SF_NOTIFY_READ_RAW_DATA:
